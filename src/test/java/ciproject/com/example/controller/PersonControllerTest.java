@@ -2,7 +2,6 @@ package ciproject.com.example.controller;
 
 import ciproject.com.example.model.Person;
 import ciproject.com.example.repository.PersonRepository;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,5 +45,10 @@ public class PersonControllerTest {
     public void test02() {
         List<Person> founds = repository.findByName("barbosa");
         assertThat(founds.size()).isEqualTo(0);
+    }
+    @Test
+    public void test03() {
+        System.out.println("Test");
+        assertThat(true).isEqualTo(false);
     }
 }
