@@ -41,4 +41,5 @@ jobs:
     - name: Run tests with Maven
       run: mvn -B test --file pom.xml
     - name: Build with Maven
+      if: ${{ success() }}
       run: mvn -B package --file pom.xml
